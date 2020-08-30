@@ -1,0 +1,47 @@
+.vertical-menu {
+    background: #fff;
+    height: 50px;
+    display: flex;
+}
+.vertical-menu > div:nth-child(1) {
+    width: 25%;
+    vertical-align: middle;
+    align-self: center;
+    padding-left: 1rem;
+    text-align: left;
+}
+.vertical-menu > div:nth-child(2) {
+    width: 50%;
+    display: flex;
+    align-self: center;
+}
+.vertical-menu > div:nth-child(3) {
+    width: 25%;
+    align-self: center;
+    text-align: center;
+}
+.menu {
+    width: 10rem;
+    color: #03a9f4;
+    cursor: pointer;
+}
+.menu.active {
+    font-weight: bold;
+}
+.timer-container {
+    margin-top: 2rem;
+    background: #fff;
+    text-align: center;
+    border-radius: 10px;
+    padding: 2rem;
+    min-height: 10rem;
+    width: fit-content;
+    min-width: 40rem;
+}
+textarea {
+    width: 70%;
+    padding: 0.5rem 0.5rem;
+    margin: 8px 0;
+    box-sizing: border-box;
+    height: 100px;
+}

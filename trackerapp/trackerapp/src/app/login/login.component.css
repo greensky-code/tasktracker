@@ -1,0 +1,20 @@
+.login-class {
+    background: #fff;
+    padding: 3rem;
+    margin: 1rem;
+}
+.landing-style {
+    width: 45%;
+    align-self: center;
+    margin-left: 1rem;
+}
+.landing-style > h2 {
+    font-family: sans-serif;
+    color: #fff;
+}
+input[type=text],[type=password] {
+    width: 100%;
+    padding: 0.5rem 0.5rem;
+    margin: 8px 0;
+    box-sizing: border-box;
+}

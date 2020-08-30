@@ -1,0 +1,36 @@
+<script src="https://demo.docusign.net/clickapi/sdk/latest/docusign-click.js"></script>
+<div align="center" class="home-container">
+  <div class="vertical-menu">
+    <div>
+      <img width="30" alt="Logo" src="assets/images/docusign.jpeg">
+    </div>
+    <div>
+      <div class="menu">Welcome {{userName}}</div>
+      <div class="menu" (click)="openMenuItem($event);logout();">Logout</div>
+    </div>
+    <div>
+      <button class="button-style" type="button" (click)="start()" [disabled]="disableFlagStart">Start Timer</button>
+      <button class="button-style" type="button" (click)="stop()" [disabled]="!disableFlagStart">Stop Timer</button>
+    </div>
+  </div>
+  <div class="timer-container">
+    <ng-container *ngIf="isAgree == 0">
+      <div>There is some necessary task to be completed. This is the details of those tasks.</div>
+      <div id="ds-clickwrap"></div>
+      <div style="margin-top: 2rem;margin-bottom:1rem;">
+          <span><input type="checkbox" [(ngModel)]="agreeTerms" style="width:16px;height:14px;cursor: pointer;" (click)="enableAgreeBtn()"/></span>
+          <span>  I agree to complete the task, as per given timeline with all my concent.</span>
+      </div>
+      <div>
+          <button class="button-style" (click)="validate()" [disabled]="disableFlagAgree">Agree</button>
+          <button class="shad-button-style" (click)="decline()">Decline</button>
+      </div>
+    </ng-container>
+    <ng-container *ngIf="isAgree == -1 || isAgree == 1">
+      <div style="margin-bottom:1rem;font-size: 3em;font-family: sans-serif;">{{hoursTxt}}:{{minutesTxt}}:{{secondTxt}}</div>
+      <textarea [(ngModel)]="taskDetails" placeholder="Enter Task Details..."></textarea><br>
+      <button class="button-style" (click)="pause()" [disabled]="disableFlagPause">Pause</button>
+      <button class="button-style" (click)="clear()" [disabled]="disableFlagclear">Reset</button>
+    </ng-container>
+  </div>
+</div>

@@ -1,0 +1,40 @@
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: sans-serif;
+}
+.home-container {
+    background: #00bcd480;
+    padding: 2rem;
+    height: 100vh;
+}
+.button-style {
+    background: #00BCD4;
+    font-weight: 600;
+    border: none;
+    color: #fff;
+    border-radius: 8px;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+.shad-button-style {
+    background: #eeeeee;
+    font-weight: 600;
+    border: none;
+    color: #03a9f4;
+    border-radius: 8px;
+    margin: 0.5rem;
+    margin-left: 1rem;
+    padding: 0.5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    cursor: pointer;
+    outline: none;
+}
+button:disabled {
+    border: none;
+    cursor: not-allowed;
+}
